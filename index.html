@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation</title>
+	<style>
+		.container{
+			display:grid;
+			height:100vh;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: .8fr .2fr 1fr 1fr 1fr;
+			grid-gap: .2rem;
+			grid-template-areas: 
+				"header header header header"
+				"nav nav nav nav"
+				"history history history first"
+				"types 2d stop 3d"
+				"design design design design"
+				"footer footer footer footer"
+		 }
+		
+		.container > div{
+			background: royalblue;
+			padding: 2em;
+		}
+		
+		.container > div:nth-child(odd){
+			background: cadetblue;
+		}
+		
+		header {
+			background: cornflowerblue;
+			text-align: center;
+			grid-area: header;
+		}
+		
+		nav {
+			background: red;
+			grid-area: nav;
+		}
+		
+		#history {
+			grid-area: history;
+		}
+		
+		#first {
+			grid-area: first;
+		}
+		
+		#types {
+			grid-area: types;
+		}
+		
+		#2d {
+			grid-area: 2d;
+		}
+		
+		#stop {
+			grid-area: stop;
+		}
+		
+		#3d {
+			grid-area: 3d;
+		}
+		
+		#design {
+			grid-area: design;
+		}
+				
+		footer {
+			background: grey;
+			grid-area: footer;
+			text-align: center;
+		}
+		
+		ul {     /*--changed some here--*/
+  			list-style-type: none;
+  			margin: 0;
+  			padding: 0;
+  			display:flex;
+			justify-content:space-around;
+		}
+		
+		li {
+  			display: inline;
+		}
+		
+		a {
+			text-decoration:none;
+			color:white;
+		}
+		
+		@media only screen and (max-width: 600px)
+		{
+			.container {
+				grid-template-columns: 1fr;
+				grid-template-rows: 0.4fr 0.4fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+				grid-template-areas: 
+					"header"
+					"nav"
+					"history"
+					"first"
+					"types"
+					"2d"
+					"stop"
+					"3d"
+					"design"
+					"footer"					
+										
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		
+		<header>
+			<h1>Animation</h1>
+		</header>
+		
+		<nav>
+			<ul>
+  				<li><a href="#history">History</a></li>        <!--nave bar-->
+  				<li><a href="#first">First Video</a></li>
+  				<li><a href="#types">Types</a></li>
+  				<li><a href="#2d">2D</a></li>
+				<li><a href="#stop">Stop Motion</a></li>
+  				<li><a href="#3d">3D</a></li>
+  				<li><a href="#design">My Design</a></li>
+			</ul>
+		</nav>
+		<div id="history">
+			<h2>History of Animation</h2>
+			<p>
+				In the early 1900's, Emily Cohl created the very first true animated film called <i>Fantasmagorie.</i>At the time chalkboard characters were popular on vaudevilles circuits, so the drawings were filmed in negative to give the animation the apperance of a chalkboard drawing brought to life.
+			</p>
+  
+ 			<p>
+				In 1915, Max Fleischer developed the rotoscope technique, where projection equipment is used to trace figures from stills of live-action footage. This method allowed animators to get a better understanding of the finer aspects of a moving form to create realistic, fluid motion in animated pieces. Fleischer's patent on rotoscoping expired in 1934, allowing other animators to swoop in and freely use the technique.
+			</p>
+		</div>
+		
+		<div id="first">
+			<h2>The First Animated Video</h2>
+			
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/swh448fLd1g"></iframe> 
+		</div>
+		
+		<div id="types">
+			<h2>Types of Animation</h2>
+			<p>
+				There are three types of animation Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel obcaecati perspiciatis iure debitis beatae accusamus sunt dolores, nemo pariatur blanditiis?
+			</p>
+		</div>
+		
+		<div id="2d">
+			<h2>2D</h2>
+			<p>
+				2D animation is doing lots of drawings a little different every time. By doing this looking at the picture it makes the image look like it's moving. This moves at 24 frames per second and has been around for thousands of years.
+			</p>
+   
+   			<img src="images/boywalking.png" style="width:50%" alt="picture of boy walking">
+		</div>
+		
+		<div id="stop">
+			<h2>Stop Motion</h2>
+			<p>
+				Stop motion is an animated filmmaking technique in which objects are physically manipulated in small increments between individually photographed frames so that they will appear to exhibit independent motion or change when the series of frames is played back
+			</p>
+			
+   			<img src="images/gumby.jpg" style="width:50%" alt="picture of gumby">
+		</div>
+		
+		<div id="3d">
+			<h2>3D</h2>
+			 <p> 
+				 3D animation is the art of using motion to bring characters, vehicles, props, and more to life within TV shows, films, and games.
+			</p>
+			
+   			<img src="images/madagascar.jpg" style="width:50%" alt="picture of zebra and lion from madagascar">
+   		</div>
+		<div id="design">
+			<h2>Pre-development Design</h2>
+			
+			<img src="images/sketch.jpg" style="width:50%" alt="sketch of webpage">
+		</div>
+		
+		<footer>&copy;2020 Michael Duffy</footer>
+		
+	</div>
+</body>
+</html>
